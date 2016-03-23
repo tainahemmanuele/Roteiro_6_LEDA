@@ -27,29 +27,32 @@ public class StudentDoubleLinkedListTest {
 	
 	private void getImplementations(){
 		//TODO O aluno deve ajustar aqui para instanciar sua implementação
-		lista1 = null;
-		lista2 = null;
-		lista3 = null;
+		lista1 = new DoubleLinkedListImpl<Integer>();
+		lista2 = new DoubleLinkedListImpl<Integer>();
+		lista3 = new DoubleLinkedListImpl<Integer>();
 	}
 
 	@Test
 	public void testIsEmpty() {
-		Assert.fail("Not implemented!");
+		Assert.assertTrue(lista2.isEmpty());
+		Assert.assertFalse(lista1.isEmpty());
 	}
 
 	@Test
 	public void testSize() {
-		Assert.fail("Not implemented!");
+		Assert.assertEquals(3, lista1.size());
 	}
 
 	@Test
 	public void testSearch() {
-		Assert.fail("Not implemented!");
+		Assert.assertEquals(3, lista1.search(3).intValue());
+
 	}
 
 	@Test
 	public void testInsert() {
-		Assert.fail("Not implemented!");
+		lista2.insert(5);
+		Assert.assertEquals(1,lista2.size() );
 	}
 
 	@Test
