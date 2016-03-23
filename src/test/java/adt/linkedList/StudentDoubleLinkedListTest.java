@@ -1,5 +1,8 @@
 package adt.linkedList;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,32 +56,45 @@ public class StudentDoubleLinkedListTest {
 	public void testInsert() {
 		lista2.insert(5);
 		Assert.assertEquals(1,lista2.size() );
+		Object[] array =  (Object[]) lista2.toArray();
+		Assert.assertEquals(5, array[0]);
 	}
 
 	@Test
 	public void testRemove() {
-		Assert.fail("Not implemented!");
+		lista1.remove(1);
+		Assert.assertEquals(2,lista1.size() );
+
 	}
 
 	@Test
-	public void testToArray() {
-		Assert.fail("Not implemented!");
+	public  void testToArray() {
+		Object[] array =  (Object[])(new Comparable[]{3,2,1});
+		Assert.assertArrayEquals(array, lista1.toArray());
 	}
 	
 	// Métodos de DoubleLinkedList
 	
 	@Test
 	public void testInsertFirst(){
-		Assert.fail("Not implemented!");
+		lista2.insertFirst(3);
+		Object[] array =  (Object[]) lista1.toArray();
+		Assert.assertEquals(3, array[0]);
+		Assert.assertEquals(3, lista2.search(3).intValue());
+
+		
 	}
 
 	@Test
 	public void testRemoveFirst(){
-		Assert.fail("Not implemented!");
+		lista1.removeFirst();
+		//Assert.assertEquals(2, lista1.size());
 	}
 	
 	@Test
 	public void testRemoveLast(){
-		Assert.fail("Not implemented!");
+		lista1.removeLast();
+		Object[] array =  (Object[]) lista1.toArray();
+		Assert.assertEquals(2, array[2]);
 	}
 }
