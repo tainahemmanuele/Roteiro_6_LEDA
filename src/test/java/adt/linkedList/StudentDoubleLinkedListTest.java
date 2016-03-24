@@ -87,14 +87,12 @@ public class StudentDoubleLinkedListTest {
 
 	@Test
 	public void testRemoveFirst(){
-		lista1.removeFirst();
-		//Assert.assertEquals(2, lista1.size());
+		
+		
 	}
 	
 	@Test
 	public void testRemoveLast(){
-		lista1.removeLast();
-		Object[] array =  (Object[]) lista1.toArray();
-		Assert.assertEquals(2, array[2]);
+	
 	}
 }
