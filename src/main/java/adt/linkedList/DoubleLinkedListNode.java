@@ -10,6 +10,15 @@ public class DoubleLinkedListNode<T> extends SingleLinkedListNode<T> {
 		super(data, next);
 		this.previous = previous;
 	}
+
+	public DoubleLinkedListNode<T> getPrevious() {
+		return previous;
+	}
+
+	public void setPrevious(DoubleLinkedListNode<T> previous) {
+		this.previous = previous;
+	}
+	
 	
 	
 }

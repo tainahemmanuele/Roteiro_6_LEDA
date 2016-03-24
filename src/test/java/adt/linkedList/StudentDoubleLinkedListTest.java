@@ -78,7 +78,7 @@ public class StudentDoubleLinkedListTest {
 	@Test
 	public void testInsertFirst(){
 		lista2.insertFirst(3);
-		Object[] array =  (Object[]) lista1.toArray();
+		Object[] array =  (Object[]) lista2.toArray();
 		Assert.assertEquals(3, array[0]);
 		Assert.assertEquals(3, lista2.search(3).intValue());
 
@@ -87,12 +87,16 @@ public class StudentDoubleLinkedListTest {
 
 	@Test
 	public void testRemoveFirst(){
-		
+		lista1.removeFirst();
+		Object[] array =  (Object[]) lista1.toArray();
+		Assert.assertEquals(2, array[0]);
 		
 	}
 	
 	@Test
 	public void testRemoveLast(){
-	
+		lista1.removeLast();
+		Object[] array =  (Object[]) lista1.toArray();
+		Assert.assertEquals(2, array[1]);
 	}
 }

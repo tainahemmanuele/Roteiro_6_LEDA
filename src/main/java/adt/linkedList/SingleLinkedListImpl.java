@@ -3,6 +3,7 @@ package adt.linkedList;
 public class SingleLinkedListImpl<T> implements LinkedList<T> {
 
 	protected SingleLinkedListNode<T> head;
+
 	
 	
 	
@@ -19,7 +20,7 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 	public int size() {
 		int size =0;
 		SingleLinkedListNode<T> aux = head;
-		while(!aux.isNIL()){
+		while(aux != null && !aux.isNIL()){
 			size++;
 			aux = aux.getNext();
 		}
@@ -79,11 +80,9 @@ public class SingleLinkedListImpl<T> implements LinkedList<T> {
 		}
 		T [] array= (T[]) new Object[size()];
 		SingleLinkedListNode<T> aux = head;
-		int i = 0;
-		while(!aux.isNIL()){
-			array[i] = aux.getData();
-			aux = aux.next;
-			i++;
+		for (int j = 0; j < array.length; j++) {
+			array[j] = aux.getData();
+			aux = aux.getNext();
 		}
 		return array;
 		
